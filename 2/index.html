@@ -1,0 +1,119 @@
+<html>
+  <!--
+ Анимация намеренно сделана некорректно!
+ Необходимо выяснить что именно здесь некорректно и сделать правильно.
+ Данный пример создан чтобы показать как должен выглядеть лоадер
+ -->
+  <head>
+    <style>
+      body {
+        background: #343434;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .loader {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .loader_round {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        position: absolute;
+      }
+
+      .round3 {
+        background-color: #ccc;
+        left: 0px;
+        top: 0px;
+        animation: 3s ease-in-out infinite moveround1;
+      }
+
+      .round1 {
+        background-color: #999;
+        left: 0px;
+        top: 0px;
+        animation: 3s ease-in-out infinite moveround3;
+      }
+
+      @keyframes moveround1 {
+        0% {
+          transition: transform 300ms ease;
+          will-change: transform;
+        }
+
+        25% {
+          -webkit-transform: translateX(95px);
+          transform: translateX(95px);
+          will-change: transform;
+          transition: transform 500ms ease;
+        }
+
+        50% {
+          -webkit-transform: translate(95px, 95px);
+          transform: translate(95px, 95px);
+          will-change: transform;
+          transition: transform 300ms ease;
+        }
+
+        75% {
+          -webkit-transform: translateY(95px);
+          transform: translateY(95px);
+          will-change: transform;
+          transition: transform 500ms ease;
+        }
+
+        100% {
+          transition: transform 300ms ease;
+          will-change: transform;
+        }
+      }
+
+      @keyframes moveround3 {
+        0% {
+          transition: transform 300ms ease;
+          will-change: transform;
+        }
+
+        25% {
+          -webkit-transform: translateY(95px);
+          transform: translateY(95px);
+          will-change: transform;
+          transition: transform 500ms ease;
+        }
+
+        50% {
+          -webkit-transform: translate(95px, 95px);
+          transform: translate(95px, 95px);
+          will-change: transform;
+          transition: transform 300ms ease;
+        }
+
+        75% {
+          -webkit-transform: translateX(95px);
+          transform: translateX(95px);
+          will-change: transform;
+          transition: transform 500ms ease;
+        }
+
+        100% {
+          transition: transform 300ms ease;
+          will-change: transform;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader">
+      <div class="loader_round round1"></div>
+      <div class="loader_round round3"></div>
+    </div>
+  </body>
+</html>

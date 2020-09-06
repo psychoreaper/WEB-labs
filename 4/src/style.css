@@ -1,0 +1,33 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: antiquewhite;
+  color: blueviolet;
+  margin: 30px;
+}
+
+#nav-main {
+  margin: 20px auto;
+}
+
+#nav-main a {
+  text-decoration: none;
+  padding: 5px;
+  /*border: 1px solid silver;*/
+  background-color: whitesmoke;
+  color: #333;
+  font-weight: bold;
+}
+
+#nav-main a:hover {
+  background-color: antiquewhite;
+}
+
+#poke-text {
+  max-width: 1700px;
+  float: right;
+}
+
+#poke-img {
+  max-width: 100px;
+  float: left;
+}
